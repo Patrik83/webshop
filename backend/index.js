@@ -5,16 +5,26 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-const productData = require("./products.json")
-const categoryData = require("./categories.json")
+const productData = require("./data/products.json")
 
 
 app.get("/api/products", (req, res) => {
     res.json(productData)
 });
 
+// Hämta alla unika kategorier direkt från produkterna
 app.get("/categories", (req, res) => {
-    res.json(categoryData)
+    const categories = [];
+
+    productData.forEach(product => {
+        product.categories.forEach(category => {
+            if (!categories.some(cat => cat.id === category.id)) {
+                categories.push(category);  // Lägg till om kategorin inte redan finns
+            }
+        });
+    });
+
+    res.json(categories);  // Skicka unika kategorier som svar
 });
 
 app.get("/categories/:categoryName", (req, res) => {
