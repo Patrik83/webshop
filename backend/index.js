@@ -12,6 +12,19 @@ app.get("/api/products", (req, res) => {
     res.json(productData)
 });
 
+app.get("/api/products/:productId", (req, res) => {
+    const productId = parseInt(req.params.productId, 10);
+
+    // Find the product with the specified productId
+    const product = productData.find(product => product.id === productId);
+
+    if (!product) {
+        return res.status(404).json({ error: "Inga produkter hittades." });
+    }
+
+    res.json(product);
+});
+
 // Hämta alla unika kategorier direkt från produkterna
 app.get("/categories", (req, res) => {
     const categories = [];

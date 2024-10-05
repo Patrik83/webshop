@@ -9,13 +9,6 @@ export function Menu() {
 
   return (
     <div className={`navigation ${showMenu && 'menuOpened'}`}>
-      {/* Admin Länk */}
-      <Link 
-        to="/admin" 
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        Admin
-      </Link>
       {/* Home Länk */}
       <Link 
         to="/" 

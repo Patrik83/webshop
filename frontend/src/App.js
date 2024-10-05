@@ -6,7 +6,6 @@ import CartPage from "./pages/cart/CartPage";
 import Header from "./shared/Header";
 import CategoryPage from "./pages/category/CategoryPage";
 import HomePage from "./pages/home/HomePage";
-import AdminPage from "./pages/admin/AdminPage";
 
 const App = () => {
 
@@ -14,7 +13,6 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/admin" element={<AdminPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/categories/:categoryName" element={<CategoryPage />} />
         <Route path="/cart" element={<CartPage />} />

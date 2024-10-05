@@ -5,7 +5,7 @@ import useApi from "../../hooks/useApi";
 
 const ProductDetailPage = () => {
   let { productId } = useParams();
-  const { data: product, loaded } = useApi(`http://localhost:3001/products/${productId}`);
+  const { data: product, loaded } = useApi(`http://localhost:3001/api/products/${productId}`);
 
   if (!loaded) {
     return <div>Laddar...</div>;
