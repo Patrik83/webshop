@@ -1,0 +1,142 @@
+[
+    {
+      "id": 1,
+      "name": "Samsung",
+      "price": 1649.00,
+      "Images": [
+        {
+          "id": 1,
+          "productId": 1,
+          "imageUrl": "url-till-bild-1.jpg"
+        },
+        {
+          "id": 2,
+          "productId": 1,
+          "imageUrl": "url-till-bild-2.jpg"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Telefoner"
+        }
+      ]
+    },
+      
+    {
+      "id": 2,
+      "name": "iPhone",
+      "price": 5439.00,
+      "Images": [
+        {
+          "id": 3,
+          "productId": 2,
+          "imageUrl": "mobil-1.jpg"
+        },
+        {
+          "id": 4,
+          "productId": 2,
+          "imageUrl": "mobil-2.jpg"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Telefoner"
+        }
+      ]
+    },
+    {
+        "id": 3,
+        "name": "Gul t-shirt",
+        "price": 79.00,
+        "Images": [
+          {
+            "id": 5,
+            "productId": 3,
+            "imageUrl": "yellow.png"
+          },
+          {
+            "id": 6,
+            "productId": 3,
+            "imageUrl": "yellow.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 4,
+        "name": "Röd t-shirt",
+        "price": 79.00,
+        "Images": [
+          {
+            "id": 7,
+            "productId": 4,
+            "imageUrl": "red.png"
+          },
+          {
+            "id": 8,
+            "productId": 4,
+            "imageUrl": "red.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 5,
+        "name": "Blå t-shirt",
+        "price": 79.00,
+        "Images": [
+          {
+            "id": 9,
+            "productId": 5,
+            "imageUrl": "blue.png"
+          },
+          {
+            "id": 10,
+            "productId": 5,
+            "imageUrl": "blue.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 6,
+        "name": "Sneakers",
+        "price": 649.00,
+        "Images": [
+          {
+            "id": 11,
+            "productId": 6,
+            "imageUrl": "converse-green.png"
+          },
+          {
+            "id": 12,
+            "productId": 6,
+            "imageUrl": "converse-blue.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      }
+  ]
+  

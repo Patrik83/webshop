@@ -1,0 +1,76 @@
+.navigation {
+    overflow: hidden;
+    /* position: absolute; */
+    /* justify-self: right; */
+  }
+
+  /* Nav länkarna */
+  .navigation > a {
+    color: black;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Göm meny knappen vid högre upplösningar */
+  .navigation .hamburgerIcon {
+    display: none;
+  }
+  
+  .navigation .closeIcon {
+    display: none;
+  }
+  
+  /* Inställningar för collapsat läge */
+   @media screen and (max-width: 1024px) {
+
+    .navigation {
+      position: fixed;
+      justify-self: left;
+      z-index: 1;
+    }
+  
+    .navigation a {
+      display: none;
+    }
+    /* Inställningar för meny-ikonen i stängt läge*/
+    .navigation .hamburgerIcon {
+      display: block;
+      background-color: #fff;
+      height: 34px;
+      width: 28px
+    }
+  
+    .navigation.menuOpened { 
+      background-color: #fff; 
+      z-index: 1;
+      width: 370px;
+      height: 100vh;
+      position: absolute;
+      left: 0;
+      top: 0
+    }
+    
+    /* Hamburgar ikonen i öppnad meny */
+    .navigation.menuOpened .hamburgerIcon {
+      display: none;
+    }
+    /* Stäng-ikonen i öppnad meny */
+    .navigation.menuOpened .closeIcon {
+      display: block;
+      background-color: #fff;
+      top: 0;
+      right: 0;
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      z-index: 1; /* Säkerställ att closeIcon ligger ovanpå länkarna */
+    }
+    /* Länkarna i öppnad meny */
+    .navigation.menuOpened a {
+      display: block;
+      text-align: left;
+      padding-top: 35px; /* Skapa utrymme ovanför länkarna för closeIcon */
+      padding-left: 35px; /* Skapa utrymme så att länkarna inte ligger precis vid closeIcon */
+    }
+  }

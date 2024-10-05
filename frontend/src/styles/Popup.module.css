@@ -1,0 +1,26 @@
+.popup {
+    position: fixed;
+    background-color: lightgray;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    width: 70%;
+    max-width: 640px;
+    background-color: #fff;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
