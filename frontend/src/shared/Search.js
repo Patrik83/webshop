@@ -15,8 +15,8 @@ const Search = () => {
   // Customhook för att hämta produkter baserat på vald kategori
   const { data: products, loaded: productsLoaded } = useApi(
     selectedOption === 'all' 
-    ? 'http://localhost:3001/products' 
-    : `http://localhost:3001/products/categories/${selectedOption}`
+    ? 'http://localhost:3001/api/products' 
+    : `http://localhost:3001/categories/${selectedOption}`
   );
 
     // Funktion för att hantera sökningar
