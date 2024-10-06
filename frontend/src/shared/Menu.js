@@ -5,7 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { MenuUtils } from "./MenuUtils";
 
 export function Menu() {
-  const { showMenu, setShowMenu, categories, loaded } = MenuUtils();
+  const { showMenu, setShowMenu, categories } = MenuUtils();
 
   return (
     <div className={`navigation ${showMenu && 'menuOpened'}`}>
@@ -17,7 +17,7 @@ export function Menu() {
         Startsida
       </Link>
       {/* Kategori Länkar */}
-      {loaded && categories.map((category) => (
+      {categories.map((category) => (
         <Link
           key={category.id}
           to={`/categories/${category.name}`}

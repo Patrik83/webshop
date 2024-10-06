@@ -4,24 +4,15 @@ import { getProducts } from "../../services/ProductService";
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Hämta alla produkter när komponenten mountas
-    getProducts()
-      .then((data) => {
-        setProducts(data);  // Sätt produkterna från JSON-filen
-        setLoaded(true);    // Ändra tillståndet för att indikera att data har laddats
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-        setLoaded(true);  // Ändra tillståndet även vid fel för att sluta ladda
-      });
-  }, []);
+    const fetchProducts = async () => {
+      const productsData = await getProducts();
+      setProducts(productsData);
+    };
 
-    if (!loaded) {
-      return <div>Laddar...</div>;
-    }
+    fetchProducts();
+  }, []);
 
     if (!products) {
       return <div>Inga produkter hittades.</div>;

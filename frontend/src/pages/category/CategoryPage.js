@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import List from "../../components/product/List";
-import useApi from "../../hooks/useApi";
+import { getProductsByCategory } from "../../services/ProductService";
 
 const CategoryPage = () => {
     let { categoryName } = useParams();
-    const { data: products, loaded } = useApi(`http://localhost:3001/categories/${categoryName}`);
+    const [products, setProducts] = useState([]);
 
-    if (!loaded) {
-      return <div>Laddar...</div>;
-    }
+    useEffect(() => {
+
+      getProductsByCategory(categoryName)
+        .then((data) => {
+          setProducts(data)
+        })
+        .catch((error) => {
+          console.error("Error fetching products:", error);
+        });
+    }, [categoryName]);
 
     if (!products) {
       return <div>Inga produkter hittades</div>;

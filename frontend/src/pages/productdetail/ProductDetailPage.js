@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Item from "../../components/product/Item";
-import useApi from "../../hooks/useApi";
+import { getProductById } from "../../services/ProductService";
 
 const ProductDetailPage = () => {
   let { productId } = useParams();
-  const { data: product, loaded } = useApi(`http://localhost:3001/api/products/${productId}`);
+  const [product, setProduct] = useState(null);
 
-  if (!loaded) {
-    return <div>Laddar...</div>;
-  }
+  useEffect(() => {
+
+    getProductById(productId)
+      .then((data) => {
+        setProduct(data)
+      })
+      .catch((error) => {
+        console.error("Error fetching products:", error);
+      });
+
+  }, [productId]); // Kör effekten när productId ändras
 
   if (!product) {
     return <div>Inga produkter hittades.</div>;

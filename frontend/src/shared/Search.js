@@ -1,83 +1,102 @@
-import React, { useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import styles from "../styles/Search.module.css";
-import useApi from "../hooks/useApi";    
+import { getProducts, getUniqueCategories } from "../services/ProductService";
 
 const Search = () => {
-  // State för sökord, vald kategori och sökresultat
   const [inputValue, setInputValue] = useState('');
   const [selectedOption, setSelectedOption] = useState('all');
   const [results, setResults] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Customhook för att hämta alla kategorier
-  const { data: categories, loaded: categoriesLoaded } = useApi('http://localhost:3001/categories');
-  // Customhook för att hämta produkter baserat på vald kategori
-  const { data: products, loaded: productsLoaded } = useApi(
-    selectedOption === 'all' 
-    ? 'http://localhost:3001/api/products' 
-    : `http://localhost:3001/categories/${selectedOption}`
-  );
-
-    // Funktion för att hantera sökningar
-    const handleSearch = useCallback((event) => {
-      const searchValue = event.target.value.trim().toLowerCase();
-        setInputValue(searchValue);
-        // Är sökfältet tomt, retunera tom array
-        if (searchValue === '') {
-            setResults([]);
-            return;
-        }
-        // Om produkten finns, filtrera och uppdatera setResults
-        if (products) {
-          const searchResults = products.filter(item =>
-            item.name.toLowerCase().includes(searchValue));
-            setResults(searchResults);
-        }
-    }, [products]);
-
-    // Funktion för att hantera kategorival
-    const handleChange = (event) => {
-        const category = event.target.value;
-        setSelectedOption(category);
-        console.log("Option selected:", category);
-
-        // Rensa sökfält och sökresultat vid nytt kategorival
-        setInputValue('');
-        setResults([]);
+  useEffect(() => {
+    const fetchProductsAndCategories = async () => {
+      try {
+        const productsData = await getProducts(); 
+        setProducts(productsData);
+        
+        // Hämta unika kategorier
+        const uniqueCategories = await getUniqueCategories();
+        setCategories(uniqueCategories);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    // Funktion för att hantera klick på sökresultat
-    const handleClick = () => {
-        setInputValue('');
-        document.activeElement.blur();
-    };
+    fetchProductsAndCategories();
+  }, []);
 
-    // Kontrollera om data är laddad
-    if (!categoriesLoaded || !productsLoaded) {
-        return <div>Laddar...</div>;
+  // Funktion för att hantera sökningar
+  const handleSearch = useCallback((event) => {
+    const searchValue = event.target.value.trim().toLowerCase();
+    setInputValue(searchValue);
+    
+    // Är sökfältet tomt, retunera tom array
+    if (searchValue === '') {
+      setResults([]);
+      return;
     }
 
-    return (
-      <div className={styles.searchWrapper}>
-        {/* Sökfält */}
-        <input
-          className={styles.searchinput}
-          type="text"
-          placeholder="&#x1f50e; Sök..."
-          value={inputValue}
-          onChange={handleSearch}
-        />
-          {/* Kategoriväljare */}
-        <select 
-          className={styles.searchDropdown}
-          value={selectedOption} 
-          onChange={handleChange}
-        >
-          {/* Visar alla kategorier */}
-          <option value="all">Alla</option>
-            {categories.map((category) => (
-           <option key={category.id} value={category.name}>{category.name}</option>
+    // Kontrollera att products är definierat innan vi filtrerar
+    if (products && products.length > 0) {
+      const filteredProducts = selectedOption === 'all' 
+        ? products 
+        : products.filter(product => product.categories.some(category => category.name === selectedOption));
+
+      const searchResults = filteredProducts.filter(item =>
+        item.name.toLowerCase().includes(searchValue)
+      );
+      setResults(searchResults);
+    }
+  }, [products, selectedOption]);
+
+  // Funktion för att hantera kategorival
+  const handleChange = (event) => {
+    const category = event.target.value;
+    setSelectedOption(category);
+    console.log("Option selected:", category);
+
+    // Rensa sökfält och sökresultat vid nytt kategorival
+    setInputValue('');
+    setResults([]);
+  };
+
+  // Funktion för att hantera klick på sökresultat
+  const handleClick = () => {
+    setInputValue('');
+    document.activeElement.blur();
+  };
+
+  // Kontrollera om vi är i ett laddningstillstånd
+  if (loading) {
+    return <div>Laddar...</div>;
+  }
+
+  return (
+    <div className={styles.searchWrapper}>
+      {/* Sökfält */}
+      <input
+        className={styles.searchinput}
+        type="text"
+        placeholder="&#x1f50e; Sök..."
+        value={inputValue}
+        onChange={handleSearch}
+      />
+      {/* Kategoriväljare */}
+      <select 
+        className={styles.searchDropdown}
+        value={selectedOption} 
+        onChange={handleChange}
+      >
+        {/* Visar alla kategorier */}
+        <option value="all">Alla</option>
+        {categories.map((category) => (
+          <option key={category.id} value={category.name}>{category.name}</option>
         ))}
       </select>
 
