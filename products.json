@@ -77,12 +77,12 @@
           {
             "id": 7,
             "productId": 4,
-            "imageUrl": "/webshop/images/red.png"
+            "imageUrl": "images/red.png"
           },
           {
             "id": 8,
             "productId": 4,
-            "imageUrl": "/webshop/images/red.png"
+            "imageUrl": "images/red.png"
           }
         ],
         "categories": [
@@ -100,12 +100,12 @@
           {
             "id": 9,
             "productId": 5,
-            "imageUrl": "/webshop/images/blue.png"
+            "imageUrl": "images/blue.png"
           },
           {
             "id": 10,
             "productId": 5,
-            "imageUrl": "/webshop/images/blue.png"
+            "imageUrl": "images/blue.png"
           }
         ],
         "categories": [
@@ -123,12 +123,12 @@
           {
             "id": 11,
             "productId": 6,
-            "imageUrl": "/webshop/images/converse-green.png"
+            "imageUrl": "/images/converse-green.png"
           },
           {
             "id": 12,
             "productId": 6,
-            "imageUrl": "/webshop/images/converse-blue.png"
+            "imageUrl": "/images/converse-blue.png"
           }
         ],
         "categories": [
