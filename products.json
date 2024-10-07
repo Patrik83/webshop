@@ -7,12 +7,12 @@
         {
           "id": 1,
           "productId": 1,
-          "imageUrl": "url-till-bild-1.jpg"
+          "imageUrl": "images/url-till-bild-1.jpg"
         },
         {
           "id": 2,
           "productId": 1,
-          "imageUrl": "url-till-bild-2.jpg"
+          "imageUrl": "images/url-till-bild-2.jpg"
         }
       ],
       "categories": [
@@ -31,12 +31,12 @@
         {
           "id": 3,
           "productId": 2,
-          "imageUrl": "mobil-1.jpg"
+          "imageUrl": "images/mobil-1.jpg"
         },
         {
           "id": 4,
           "productId": 2,
-          "imageUrl": "mobil-2.jpg"
+          "imageUrl": "images/mobil-2.jpg"
         }
       ],
       "categories": [
@@ -54,12 +54,12 @@
           {
             "id": 5,
             "productId": 3,
-            "imageUrl": "yellow.png"
+            "imageUrl": "images/yellow.png"
           },
           {
             "id": 6,
             "productId": 3,
-            "imageUrl": "yellow.png"
+            "imageUrl": "images/yellow.png"
           }
         ],
         "categories": [
@@ -100,12 +100,12 @@
           {
             "id": 9,
             "productId": 5,
-            "imageUrl": "blue.png"
+            "imageUrl": "images/blue.png"
           },
           {
             "id": 10,
             "productId": 5,
-            "imageUrl": "blue.png"
+            "imageUrl": "images/blue.png"
           }
         ],
         "categories": [
@@ -123,12 +123,12 @@
           {
             "id": 11,
             "productId": 6,
-            "imageUrl": "converse-green.png"
+            "imageUrl": "images/converse-green.png"
           },
           {
             "id": 12,
             "productId": 6,
-            "imageUrl": "converse-blue.png"
+            "imageUrl": "images/converse-blue.png"
           }
         ],
         "categories": [
