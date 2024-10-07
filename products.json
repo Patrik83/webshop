@@ -7,12 +7,12 @@
         {
           "id": 1,
           "productId": 1,
-          "imageUrl": "/webshop/images/url-till-bild-1.jpg"
+          "imageUrl": "webshop/images/url-till-bild-1.jpg"
         },
         {
           "id": 2,
           "productId": 1,
-          "imageUrl": "/webshop/images/url-till-bild-2.jpg"
+          "imageUrl": "webshop/images/url-till-bild-2.jpg"
         }
       ],
       "categories": [
@@ -31,12 +31,12 @@
         {
           "id": 3,
           "productId": 2,
-          "imageUrl": "/webshop/images/mobil-1.jpg"
+          "imageUrl": "webshop/images/mobil-1.jpg"
         },
         {
           "id": 4,
           "productId": 2,
-          "imageUrl": "/webshop/images/mobil-2.jpg"
+          "imageUrl": "webshop/images/mobil-2.jpg"
         }
       ],
       "categories": [
