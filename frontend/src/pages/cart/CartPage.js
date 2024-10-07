@@ -18,7 +18,7 @@ export default function CartPage() {
       {cartItems.length === 0 && <h1>Varukorgen är tom</h1>}
       {/* Annars visa tillagda produkter */}
         {cartItems.map((item) => (
-          <div className={style.cartItem} key={item.id}> {/* Grid parent */}
+          <div className={style.cartItem} key={item.id}>
             <Image 
               imageUrl={item.Images[0].imageUrl} 
               altText={`Bild på ${item.name}`} 
@@ -43,7 +43,7 @@ export default function CartPage() {
         ))}
       </div>
 
-      {/* Höger sidomeny med orderinformation */} {/* RIGHT BOX */}
+      {/* Höger sidomeny med orderinformation */}
       <div className={style.productDetails}>
           <p>Totalsumma {getCartTotal()} kr</p>
           <br />

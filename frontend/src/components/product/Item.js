@@ -11,11 +11,11 @@ const Item = ({ product }) => {
 
   return (
     <main className={style.productWrapper}>
-      {/* Små produktbilder */} {/* LEFT BOX */}
+      {/* Små produktbilder */}
       <div className={style.imgSmallWrapper}>
         <ImageSelector images={product.Images} onImageClick={setSelectedImageIndex} />
       </div>
-      {/* Stor produktbild */} {/* MIDDLE BOX */}
+      {/* Stor produktbild */}
       <div className={style.pictureWrapper}>
           <Image
             imageUrl={product.Images[selectedImageIndex].imageUrl}
@@ -24,7 +24,7 @@ const Item = ({ product }) => {
           />
       </div>
 
-      {/* Höger sidomeny */} {/* RIGHT BOX */}
+      {/* Höger sidomeny */}
       <div className={style.productDetails}>
         <Details product={product}>
           <div className={style.shopbtn}>

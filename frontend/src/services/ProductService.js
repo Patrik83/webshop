@@ -7,6 +7,7 @@ export const getProducts = async () => {
 
 export const getProductById = async (id) => {
     const products = await getProducts();
+
     const product = products.find(product => product.id === parseInt(id, 10));
   
     return product;
@@ -16,7 +17,6 @@ export const getProductById = async (id) => {
 export const getUniqueCategories = async () => {
   const categories = [];
   const products = await getProducts();
-
 
   products.forEach(product => {
     product.categories.forEach(category => {
@@ -30,7 +30,6 @@ export const getUniqueCategories = async () => {
 };
 
 export const getProductsByCategory = async (categoryName) => {
-    // Hämta alla produkter
     const products = await getProducts(); 
     
     // Filtrera produkter baserat på den valda kategorin
