@@ -7,12 +7,12 @@
         {
           "id": 1,
           "productId": 1,
-          "imageUrl": "/images/url-till-bild-1.jpg"
+          "imageUrl": "https://patrik83.github.io/webshop/images/url-till-bild-1.jpg"
         },
         {
           "id": 2,
           "productId": 1,
-          "imageUrl": "/images/url-till-bild-2.jpg"
+          "imageUrl": "https://patrik83.github.io/webshop/images/url-till-bild-2.jpg"
         }
       ],
       "categories": [
@@ -31,12 +31,12 @@
         {
           "id": 3,
           "productId": 2,
-          "imageUrl": "/images/mobil-1.jpg"
+          "imageUrl": "https://patrik83.github.io/webshop/images/mobil-1.jpg"
         },
         {
           "id": 4,
           "productId": 2,
-          "imageUrl": "/images/mobil-2.jpg"
+          "imageUrl": "https://patrik83.github.io/webshop/images/mobil-2.jpg"
         }
       ],
       "categories": [
@@ -54,12 +54,12 @@
           {
             "id": 5,
             "productId": 3,
-            "imageUrl": "/images/yellow.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/yellow.png"
           },
           {
             "id": 6,
             "productId": 3,
-            "imageUrl": "/images/yellow.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/yellow.png"
           }
         ],
         "categories": [
@@ -77,12 +77,12 @@
           {
             "id": 7,
             "productId": 4,
-            "imageUrl": "/images/red.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/red.png"
           },
           {
             "id": 8,
             "productId": 4,
-            "imageUrl": "/images/red.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/red.png"
           }
         ],
         "categories": [
@@ -100,12 +100,12 @@
           {
             "id": 9,
             "productId": 5,
-            "imageUrl": "/images/blue.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/blue.png"
           },
           {
             "id": 10,
             "productId": 5,
-            "imageUrl": "/images/blue.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/blue.png"
           }
         ],
         "categories": [
@@ -123,12 +123,12 @@
           {
             "id": 11,
             "productId": 6,
-            "imageUrl": "/images/converse-green.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/converse-green.png"
           },
           {
             "id": 12,
             "productId": 6,
-            "imageUrl": "/images/converse-blue.png"
+            "imageUrl": "https://patrik83.github.io/webshop/images/converse-blue.png"
           }
         ],
         "categories": [
