@@ -1,3 +1,3 @@
 export function getImageUrl(imageId) {
-  return `/images/${imageId}`;
+  return `/webshop/images/${imageId}`;
 }

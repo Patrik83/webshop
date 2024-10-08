@@ -10,7 +10,7 @@ const ImageSelector = ({ images, onImageClick }) => {
       {images.map((image, index) => (
         <img
           key={index}
-          src={`/images/${image.imageUrl}`}
+          src={`/webshop/images/${image.imageUrl}`}
           alt={`Bild ${index + 1}`}
           style={{ cursor: "pointer" }}
           onClick={() => handleImageClick(index)}

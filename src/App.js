@@ -10,10 +10,10 @@ import HomePage from "./pages/home/HomePage";
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route index path="/" element={<HomePage />} />
         <Route path="/categories/:categoryName" element={<CategoryPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/product/:productId" element={<ProductDetailPage />} />
