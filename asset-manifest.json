@@ -1,5 +1,14 @@
 {
   "files": {
+    "url-till-bild-1.jpg": "/images/url-till-bild-1.jpg",
+    "url-till-bild-2.jpg": "/images/url-till-bild-2.jpg",
+    "mobil-1.jpg": "/images/mobil-1.jpg",
+    "mobil-2.jpg": "/images/mobil-2.jpg",
+    "red.png": "/images/red.png",
+    "yellow.png": "/images/yellow.png",
+    "blue.png": "/images/blue.png",
+    "converse-green.png": "/images/converse-green.png",
+    "converse-blue.png": "/images/converse-blue.png",
     "main.css": "/static/css/main.17bf4ffc.css",
     "main.js": "/static/js/main.730d3117.js",
     "static/js/453.d855a71b.chunk.js": "/static/js/453.d855a71b.chunk.js",
