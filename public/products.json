@@ -1,111 +1,143 @@
 [
     {
       "id": 1,
-      "name": "Samsung",
+      "name": "Svart Kavaj",
       "price": 1649.00,
       "Images": [
         {
           "id": 1,
           "productId": 1,
-          "imageUrl": "url-till-bild-1.jpg"
+          "imageUrl": "black-male-jacket-front.png"
         },
         {
           "id": 2,
           "productId": 1,
-          "imageUrl": "url-till-bild-2.jpg"
+          "imageUrl": "black-male-jacket-back.png"
+        },
+        {
+          "id": 3,
+          "productId": 1,
+          "imageUrl": "black-male-jacket-side.png"
         }
       ],
       "categories": [
         {
           "id": 1,
-          "name": "Telefoner"
+          "name": "Kavajer"
         }
       ]
     },
       
     {
       "id": 2,
-      "name": "iPhone",
-      "price": 5439.00,
+      "name": "Blå Kavaj",
+      "price": 1649.00,
       "Images": [
-        {
-          "id": 3,
-          "productId": 2,
-          "imageUrl": "mobil-1.jpg"
-        },
         {
           "id": 4,
           "productId": 2,
-          "imageUrl": "mobil-2.jpg"
+          "imageUrl": "blue-male-jacket-front.png"
+        },
+        {
+          "id": 5,
+          "productId": 2,
+          "imageUrl": "blue-male-jacket-back.png"
+        },
+        {
+          "id": 6,
+          "productId": 2,
+          "imageUrl": "blue-male-jacket-side.png"
         }
       ],
       "categories": [
         {
           "id": 1,
-          "name": "Telefoner"
+          "name": "Kavajer"
         }
       ]
     },
+
     {
-        "id": 3,
-        "name": "Gul t-shirt",
-        "price": 79.00,
-        "Images": [
-          {
-            "id": 5,
-            "productId": 3,
-            "imageUrl": "yellow.png"
-          },
-          {
-            "id": 6,
-            "productId": 3,
-            "imageUrl": "yellow.png"
-          }
-        ],
-        "categories": [
+      "id": 3,
+      "name": "Vit Kavaj",
+      "price": 1649.00,
+      "Images": [
         {
-          "id": 2,
-          "name": "Tröjor"
+          "id": 7,
+          "productId": 3,
+          "imageUrl": "white-male-jacket-front.png"
+        },
+        {
+          "id": 8,
+          "productId": 3,
+          "imageUrl": "white-male-jacket-back.png"
+        },
+        {
+          "id": 9,
+          "productId": 3,
+          "imageUrl": "white-male-jacket-side.png"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Kavajer"
         }
       ]
-      },
-      {
-        "id": 4,
-        "name": "Röd t-shirt",
-        "price": 79.00,
-        "Images": [
-          {
-            "id": 7,
-            "productId": 4,
-            "imageUrl": "red.png"
-          },
-          {
-            "id": 8,
-            "productId": 4,
-            "imageUrl": "red.png"
-          }
-        ],
-        "categories": [
+    },
+
+    {
+      "id": 4,
+      "name": "Blå polo-shirt",
+      "price": 79.00,
+      "Images": [
         {
-          "id": 2,
-          "name": "Tröjor"
+          "id": 10,
+          "productId": 4,
+          "imageUrl": "blue-polo-front.png"
+        },
+        {
+          "id": 11,
+          "productId": 4,
+          "imageUrl": "blue-polo-front-2.png"
+        },
+        {
+          "id": 12,
+          "productId": 4,
+          "imageUrl": "blue-polo-back.png"
+        },
+        {
+          "id": 13,
+          "productId": 4,
+          "imageUrl": "blue-polo-back-2.png"
         }
+      ],
+      "categories": [
+      {
+        "id": 2,
+        "name": "Tröjor"
+      }
       ]
       },
       {
         "id": 5,
-        "name": "Blå t-shirt",
+        "name": "Vit polo-shirt",
         "price": 79.00,
         "Images": [
           {
-            "id": 9,
+            "id": 14,
             "productId": 5,
-            "imageUrl": "blue.png"
+            "imageUrl": "white-polo-front.png"
           },
           {
-            "id": 10,
+            "id": 15,
             "productId": 5,
-            "imageUrl": "blue.png"
+            "imageUrl": "white-polo-back.png"
+          },
+          {
+            "id": 16,
+            "productId": 5,
+            "imageUrl": "white-polo-side.png"
           }
         ],
         "categories": [
@@ -117,18 +149,186 @@
       },
       {
         "id": 6,
-        "name": "Sneakers",
+        "name": "Grön polo-shirt",
+        "price": 79.00,
+        "Images": [
+          {
+            "id": 17,
+            "productId": 6,
+            "imageUrl": "green-polo-front.png"
+          },
+          {
+            "id": 18,
+            "productId": 6,
+            "imageUrl": "green-polo-front-2.png"
+          },
+          {
+            "id": 17,
+            "productId": 6,
+            "imageUrl": "green-polo-back.png"
+          },
+          {
+            "id": 18,
+            "productId": 6,
+            "imageUrl": "green-polo-back-2.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 7,
+        "name": "Grå t-shirt",
         "price": 649.00,
         "Images": [
           {
-            "id": 11,
-            "productId": 6,
-            "imageUrl": "converse-green.png"
+            "id": 19,
+            "productId": 7,
+            "imageUrl": "grey-tshirt-front.png"
           },
           {
-            "id": 12,
-            "productId": 6,
-            "imageUrl": "converse-blue.png"
+            "id": 20,
+            "productId": 7,
+            "imageUrl": "grey-tshirt-back.png"
+          },
+          {
+            "id": 21,
+            "productId": 7,
+            "imageUrl": "grey-tshirt-side.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 8,
+        "name": "Svart-vit t-shirt",
+        "price": 649.00,
+        "Images": [
+          {
+            "id": 22,
+            "productId": 8,
+            "imageUrl": "black-white-tshirt-front.png"
+          },
+          {
+            "id": 23,
+            "productId": 8,
+            "imageUrl": "black-white-tshirt-back.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 9,
+        "name": "Vit-svart t-shirt",
+        "price": 649.00,
+        "Images": [
+          {
+            "id": 24,
+            "productId": 9,
+            "imageUrl": "white-black-tshirt-front.png"
+          },
+          {
+            "id": 25,
+            "productId": 9,
+            "imageUrl": "white-black-tshirt-back.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 10,
+        "name": "Vit-svart t-shirt",
+        "price": 649.00,
+        "Images": [
+          {
+            "id": 26,
+            "productId": 10,
+            "imageUrl": "white-grey-long-sleeve-front.png"
+          },
+          {
+            "id": 27,
+            "productId": 10,
+            "imageUrl": "white-grey-long-sleeve-back.png"
+          },
+          {
+            "id": 28,
+            "productId": 10,
+            "imageUrl": "white-grey-long-sleeve-side.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 11,
+        "name": "Vit-svart t-shirt",
+        "price": 649.00,
+        "Images": [
+          {
+            "id": 29,
+            "productId": 11,
+            "imageUrl": "grey-v-sweater-front.png"
+          },
+          {
+            "id": 30,
+            "productId": 11,
+            "imageUrl": "grey-v-sweater-back.png"
+          },
+          {
+            "id": 31,
+            "productId": 11,
+            "imageUrl": "grey-v-sweater-side.png"
+          }
+        ],
+        "categories": [
+        {
+          "id": 2,
+          "name": "Tröjor"
+        }
+      ]
+      },
+      {
+        "id": 12,
+        "name": "Vit-svart t-shirt",
+        "price": 649.00,
+        "Images": [
+          {
+            "id": 32,
+            "productId": 12,
+            "imageUrl": "white-v-sweater-front.png"
+          },
+          {
+            "id": 33,
+            "productId": 12,
+            "imageUrl": "white-v-sweater-back.png"
+          },
+          {
+            "id": 34,
+            "productId": 12,
+            "imageUrl": "white-v-sweater-side.png"
           }
         ],
         "categories": [

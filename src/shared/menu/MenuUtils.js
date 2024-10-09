@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { getUniqueCategories } from "../services/ProductService";
+import { getUniqueCategories } from "../../services/ProductService";
 
 export const MenuUtils = () => {
   const [showMenu, setShowMenu] = useState(false);

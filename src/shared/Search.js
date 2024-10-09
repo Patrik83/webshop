@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import styles from "../styles/Search.module.css";
 import { getProducts, getUniqueCategories } from "../services/ProductService";
 
-const Search = () => {
+const Search = () => { /* TODO - Separera logiken från ui koden */
   const [inputValue, setInputValue] = useState('');
   const [selectedOption, setSelectedOption] = useState('all');
   const [results, setResults] = useState([]);
@@ -42,7 +42,7 @@ const Search = () => {
       return;
     }
 
-    // Kontrollera att products är definierat innan vi filtrerar
+    // Ifall inget kategorival gjorts -> sök i alla kategorier, annars sök i vald kategori
     if (products && products.length > 0) {
       const filteredProducts = selectedOption === 'all' 
         ? products 
@@ -72,7 +72,6 @@ const Search = () => {
     document.activeElement.blur();
   };
 
-  // Kontrollera om vi är i ett laddningstillstånd
   if (loading) {
     return <div>Laddar...</div>;
   }

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../../context/CartManager";
-import ImageSelector from "../../shared/ImageViewer";
+import ImageSelector from "./ImageSelector";
 import style from "../../styles/ProductItem.module.css";
 import Image from "./Image";
 import Details from "./Details";

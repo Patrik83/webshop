@@ -1,6 +1,6 @@
 import React, { useContext} from "react";
 import { Link } from 'react-router-dom';
-import { Menu } from "./Menu";
+import { Menu } from "./menu/Menu";
 import { CartContext } from "../context/CartManager";
 import Search from './Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';

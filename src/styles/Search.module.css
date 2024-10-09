@@ -13,7 +13,7 @@
   right: 0;
 }
 
-/* Behåll sökfältet synlig även när det inte är i fokus */
+/* Behåll sökfältet synligt även när det inte är i fokus */
 .searchWrapper:focus-within .searchinput {
   width: 300px;
 }

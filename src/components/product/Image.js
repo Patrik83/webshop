@@ -1,10 +1,9 @@
 import React from "react";
-import { getImageUrl } from "./utils";
 
 const Image = ({ imageUrl, altText }) => {
     return (
         <img
-            src={getImageUrl(imageUrl)}
+            src={`/webshop/images/${imageUrl}`}
             alt={altText}
         />
     )

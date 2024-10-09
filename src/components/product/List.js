@@ -9,18 +9,23 @@ const List = ({ products, categoryName }) => {
   return (
     <main className={style.container}>
       <h1 className={style.categoryText}>
+        {/* Kategorinamnet visas endast på specifika kategori-sidor */}
         {categoryName}
       </h1>
       <div className={style.productCard}>
       {products.map((product) => (
         <Card key={product.id}>
           <Link to={`/product/${product.id}`}>
+            {/* Produktbild */}
             <Image
               imageUrl={product.Images[0].imageUrl}
               altText={`Bild på ${product.name}`}
             />
             <div>
-              <Details product={product} />
+              {/* Produktens namn och pris */}
+              <Details 
+                product={product} 
+              />
             </div>
           </Link>
         </Card>
