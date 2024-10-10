@@ -3,7 +3,7 @@
   grid-template-columns: repeat(12, 1fr); /* dra ner antalet till 4 */
   max-width: 1280px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 240px;
 }
 /* Vänster låda - thumbnails */
 .imgSmallWrapper {

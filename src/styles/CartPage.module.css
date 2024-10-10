@@ -1,13 +1,9 @@
-* {
-  box-sizing: border-box;
-} 
-
 .cartWrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   max-width: 1280px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 240px;
 }
 /* Mitten låda */
 .cartMiddleBox {

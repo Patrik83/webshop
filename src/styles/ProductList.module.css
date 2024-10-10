@@ -1,19 +1,15 @@
-* {
-  box-sizing: border-box;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   max-width: 1280px;
-  margin:  auto;
+  margin: auto;
   row-gap: 50px;
-  margin-top: 50px;
-  padding: 0 0px;
+  margin-top: 150px;
 }
 
 .categoryText {
   grid-column: 1 / -1;
+  height: 40px
 }
 
 .productCard {
@@ -23,10 +19,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
-  margin: 0px;
-
+  margin: 0;
   justify-content: start;
-  align-items: center; /* Gör det här någonting? */
   background-color: #FFFEFA;
   width: 100%;
 }
