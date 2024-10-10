@@ -43,6 +43,13 @@ button {
   margin: 0;
 }
 
+@media screen and (max-width: 1278px) {
+    
+  .productWrapper {
+      padding: 0 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .productWrapper {
     display: grid;
@@ -55,15 +62,15 @@ button {
     grid-column: 1;
     grid-row: 1;
     height: 200px;
-    width: 100vw;
+    /* width: 100vw; */
   }
 
   .productDetails {
     grid-column: 1;
     grid-row: 2;
     height: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
   }
   /* TODO - kanske även dölja picturewrapper också, och visa en bild karsuell med alla bilder */
   .imgSmallWrapper {

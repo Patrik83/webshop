@@ -1,31 +1,33 @@
-/* GRID LAYOUT */
-* {
-    box-sizing: border-box;
-  } 
-
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     max-width: 1280px;
     margin: auto;
 }
 
 .menu {
     grid-column: 1 / 10;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
 }
 
 .search {
     grid-column: 10 / 13;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     justify-self: end;
 }
 
 .cart {
     grid-column: 1 / 13;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
     justify-self: end;
+}
+
+@media screen and (max-width: 1278px) {
+    
+    .container {
+        padding: 0 10px;
+    }
 }
 
 @media screen and (max-width: 1024px) {

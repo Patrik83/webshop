@@ -1,10 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   max-width: 1280px;
   margin:  auto;
   row-gap: 50px;
-  margin-top: 50px
+  margin-top: 50px;
+  padding: 0 0px;
 }
 
 .categoryText {
@@ -21,7 +26,7 @@
   margin: 0px;
 
   justify-content: start;
-  align-items: center;
+  align-items: center; /* Gör det här någonting? */
   background-color: #FFFEFA;
   width: 100%;
 }
@@ -39,6 +44,11 @@
 }
 
 @media screen and (max-width: 1278px) {
+
+  .container {
+    padding: 0 10px;
+  }
+  
   .productCard {
     justify-content: space-evenly;
   }
@@ -50,6 +60,7 @@
 }
 
 @media (max-width: 768px) {
+
   .productCard {
     justify-content: space-evenly;
   }
@@ -63,11 +74,5 @@
 @media (max-width: 400px) {
   .productCard > div {
     flex-basis: calc(100% - 20px); /* Stapla korten när skärmen blir riktigt liten */
-  }
-}
-
-@media (max-width: 200px) {
-  .productCard > div {
-    flex-basis: 100%; /* För små skärmar under 200px */
   }
 }

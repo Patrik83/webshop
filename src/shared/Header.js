@@ -4,6 +4,7 @@ import { Menu } from "./menu/Menu";
 import { CartContext } from "../context/CartManager";
 import Search from './Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Badge from '@mui/material/Badge';
 import style from "../styles/layouts/Header.module.css";
 
 export default function Header() {
@@ -16,7 +17,9 @@ export default function Header() {
       </div>
       <div className={style.cart}>
         <Link to="/cart">
-          <ShoppingCartIcon fontSize="large" color="action"/> ({cartItemCount()})
+          <Badge badgeContent={cartItemCount()} color="primary">
+            <ShoppingCartIcon fontSize="large" color="action" />
+          </Badge>
         </Link>
       </div>
       <div className={style.search}>
