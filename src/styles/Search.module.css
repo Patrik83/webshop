@@ -5,6 +5,9 @@
 }
 
 .searchDropdown {
+  /* Stänger av iOS styling */
+  border-radius: 0;
+
   border: 1px solid black;
   background-color: #fff;
   height: 37px;
