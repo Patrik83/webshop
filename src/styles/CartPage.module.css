@@ -48,3 +48,32 @@
 .itemDetails > .detailText {
   text-align: left;
 }
+
+.btnWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  background-color: yellow;
+}
+
+@media screen and (max-width: 1278px) {
+    
+  .cartWrapper {
+      padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .cartMiddleBox {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .productDetails {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 30px;
+  }
+}

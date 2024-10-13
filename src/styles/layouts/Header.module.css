@@ -4,8 +4,9 @@
     grid-template-rows: repeat(3, 1fr);
     max-width: 1280px;
     margin: auto;
-    /* Behövs för att hålla allting rätt positionerat med position fixed */ 
+
     position: fixed;
+    /* Positionerar allting rätt med position: fixed igång */
     top: 0;
     left: 0;
     right: 0;
@@ -29,6 +30,7 @@
     grid-column: 1 / 13;
     grid-row: 2 / 3;
     justify-self: end;
+    padding-right: 2px;
 }
 
 @media screen and (max-width: 1278px) {

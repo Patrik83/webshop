@@ -28,12 +28,12 @@ export default function CartPage() {
                 <h2>{item.name}</h2>
                 <p>{item.price}</p>
               </div>
-              <div>
-                <button className={style.btn} onClick={() => addToCart(item)}>
+              <div className={style.btnWrapper}>
+                <button onClick={() => addToCart(item)}>
                   {/* Ikon för att öka kvantitet */}
                   <AddCircleIcon/>
                 </button>
-                <button className={style.btn} onClick={() => removeFromCart(item.id)}>
+                <button onClick={() => removeFromCart(item.id)}>
                   {/* Ikon för att minska kvantiet */}
                   <RemoveCircleIcon/>
                 </button>

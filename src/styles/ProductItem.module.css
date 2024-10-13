@@ -91,6 +91,7 @@ button {
     grid-column: 1;
     grid-row: 3;
     height: 200px;
+    margin-top: 30px;
     /* margin-left: 20px;
     margin-right: 20px; */
   }
