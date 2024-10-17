@@ -12,6 +12,11 @@ export default function CartPage() {
 
   return (  
     <main className={style.cartWrapper}>
+
+      <h1 className={style.cartAmountText}>
+        Varukorgen: {cartItemCount}
+      </h1>
+
       {/* MIDDLE BOX */}
       <div className={style.cartMiddleBox}>
       
@@ -21,10 +26,13 @@ export default function CartPage() {
        {/* Annars, visa de tillagda produkterna */}
         {cartItems.map((item) => (
           <div className={style.cartItem} key={item.id}>
-            <Image 
-              imageUrl={item.Images[0].imageUrl} 
-              altText={`Bild på ${item.name}`} 
-            />
+            <div className={style.cartImg}>
+              <Image 
+                imageUrl={item.Images[0].imageUrl} 
+                altText={`Bild på ${item.name}`} 
+              />
+            </div>
+            
             <div className={style.itemDetails}>
               <div className={style.detailText}>
                 <h2>{item.name}</h2>
@@ -50,9 +58,7 @@ export default function CartPage() {
       {/* Höger sidomeny med orderinformation */}
       <div className={style.productDetails}> {/* Kanske döpa om denna till orderDetails */}
           <p>Totalsumma {getCartTotal()} kr</p>
-          <br />
-          <p>Antal varor {cartItemCount}</p>
-          <br />
+          
            {/* Om varukorgen inte är tom, visa knappen för att tömma varukorgen */}
           {cartItems.length > 0 && ( 
             <div className={style.btns}>
