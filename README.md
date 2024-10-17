@@ -1,4 +1,4 @@
-# Shopping Cart App
+# Shopping Cart
 
 ## Beskrivning
 Detta är en shopping-cart applikation byggd med React där användare kan bläddra och söka bland produkter, lägga till dem i sin kundvagn.
