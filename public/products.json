@@ -3,6 +3,7 @@
       "id": 1,
       "name": "Svart Kavaj",
       "price": 1649.00,
+      "amount": 5,
       "Images": [
         {
           "id": 1,
@@ -31,6 +32,7 @@
     {
       "id": 2,
       "name": "Blå Kavaj",
+      "amount": 5,
       "price": 1649.00,
       "Images": [
         {
@@ -61,6 +63,7 @@
       "id": 3,
       "name": "Vit Kavaj",
       "price": 1649.00,
+      "amount": 7,
       "Images": [
         {
           "id": 7,
@@ -90,6 +93,7 @@
       "id": 4,
       "name": "Blå polo-shirt",
       "price": 79.00,
+      "amount": 2,
       "Images": [
         {
           "id": 10,
@@ -123,6 +127,7 @@
         "id": 5,
         "name": "Vit polo-shirt",
         "price": 79.00,
+        "amount": 9,
         "Images": [
           {
             "id": 14,
@@ -151,6 +156,7 @@
         "id": 6,
         "name": "Grön polo-shirt",
         "price": 79.00,
+        "amount": 4,
         "Images": [
           {
             "id": 17,
@@ -184,6 +190,7 @@
         "id": 7,
         "name": "Grå t-shirt",
         "price": 649.00,
+        "amount": 2,
         "Images": [
           {
             "id": 19,
@@ -212,6 +219,7 @@
         "id": 8,
         "name": "Svart-vit t-shirt",
         "price": 649.00,
+        "amount": 8,
         "Images": [
           {
             "id": 22,
@@ -235,6 +243,7 @@
         "id": 9,
         "name": "Vit-svart t-shirt",
         "price": 649.00,
+        "amount": 10,
         "Images": [
           {
             "id": 24,
@@ -258,6 +267,7 @@
         "id": 10,
         "name": "Vit-svart t-shirt",
         "price": 649.00,
+        "amount": 3,
         "Images": [
           {
             "id": 26,
@@ -286,6 +296,7 @@
         "id": 11,
         "name": "Vit-svart t-shirt",
         "price": 649.00,
+        "amount": 6,
         "Images": [
           {
             "id": 29,
@@ -314,6 +325,7 @@
         "id": 12,
         "name": "Vit-svart t-shirt",
         "price": 649.00,
+        "amount": 7,
         "Images": [
           {
             "id": 32,

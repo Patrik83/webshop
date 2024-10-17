@@ -1,22 +1,24 @@
 import React, { useContext } from 'react';
 import { CartContext } from "../../context/CartManager";
-import AddCircleIcon from '@mui/icons-material/AddCircle';
-import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import style from "../../styles/CartPage.module.css";
 import Image from '../../components/product/Image';
 
 export default function CartPage() {
-  const { cartItems, addToCart, removeFromCart, getCartTotal, clearCart } = useContext(CartContext)
-  // Beräknar totala antalet varor i kundvagnen
+  // Använder useContext för att få tillgång till värden och funktioner från CartContext
+  const { cartItems, handleQuantityChange, getCartTotal, clearCart } = useContext(CartContext)
+
+  // Beräknar det totala antalet varor i kundvagnen genom att summera varje varas mängd
   const cartItemCount = cartItems.reduce((total, item) => total + item.amount, 0);
 
   return (  
     <main className={style.cartWrapper}>
       {/* MIDDLE BOX */}
       <div className={style.cartMiddleBox}>
-      {/* Vid tom varukorg */}
+      
+      {/* Om varukorgen är tom, visa ett meddelande */}
       {cartItems.length === 0 && <h1>Varukorgen är tom</h1>}
-      {/* Annars visa tillagda produkter */}
+
+       {/* Annars, visa de tillagda produkterna */}
         {cartItems.map((item) => (
           <div className={style.cartItem} key={item.id}>
             <Image 
@@ -29,14 +31,16 @@ export default function CartPage() {
                 <p>{item.price}</p>
               </div>
               <div className={style.btnWrapper}>
-                <button onClick={() => addToCart(item)}>
-                  {/* Ikon för att öka kvantitet */}
-                  <AddCircleIcon/>
-                </button>
-                <button onClick={() => removeFromCart(item.id)}>
-                  {/* Ikon för att minska kvantiet */}
-                  <RemoveCircleIcon/>
-                </button>
+                <select 
+                  className={style.amountDropdown}
+                  value={item.amount} 
+                  onChange={(e) => handleQuantityChange(item, parseInt(e.target.value, 10))}
+                >
+                  {/* Skapar en lista med 1-5 alternativ av antalet som kan väljas */}
+                  {[1, 2, 3, 4, 5].map(optionValue => (
+                    <option key={optionValue} value={optionValue}>{optionValue}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
@@ -44,12 +48,12 @@ export default function CartPage() {
       </div>
 
       {/* Höger sidomeny med orderinformation */}
-      <div className={style.productDetails}>
+      <div className={style.productDetails}> {/* Kanske döpa om denna till orderDetails */}
           <p>Totalsumma {getCartTotal()} kr</p>
           <br />
           <p>Antal varor {cartItemCount}</p>
           <br />
-          {/* Finns inga varor i varukorgen döljs knappen */}
+           {/* Om varukorgen inte är tom, visa knappen för att tömma varukorgen */}
           {cartItems.length > 0 && ( 
             <div className={style.btns}>
               <button style={{ cursor: "pointer" }} onClick={() => clearCart()}>
