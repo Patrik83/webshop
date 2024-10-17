@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { CartContext } from "../../context/CartManager";
 import style from "../../styles/CartPage.module.css";
 import Image from '../../components/product/Image';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 export default function CartPage() {
   // Använder useContext för att få tillgång till värden och funktioner från CartContext
-  const { cartItems, handleQuantityChange, getCartTotal, clearCart } = useContext(CartContext)
+  const { cartItems, handleQuantityChange, removeFromCart, getCartTotal, clearCart } = useContext(CartContext)
 
   // Beräknar det totala antalet varor i kundvagnen genom att summera varje varas mängd
   const cartItemCount = cartItems.reduce((total, item) => total + item.amount, 0);
@@ -49,6 +50,11 @@ export default function CartPage() {
                     <option key={optionValue} value={optionValue}>{optionValue}</option>
                   ))}
                 </select>
+                <DeleteForeverIcon 
+                onClick={() => removeFromCart(item)}
+                fontSize="large"
+                style={{cursor: "pointer"}}
+              />
               </div>
             </div>
           </div>

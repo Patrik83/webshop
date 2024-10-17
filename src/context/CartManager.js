@@ -53,22 +53,15 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const removeFromCart = (itemId) => {
+  const removeFromCart = (item) => {
+    const itemId = item.id;
+
     // Kolla om produkten redan finns i varukorgen
     const currentItem = cartItems.find((cartItem) => cartItem.id === itemId);
 
     if (!currentItem) return; // Om produkten inte finns, gör ingenting
 
     if (currentItem.amount > 1) {
-      // Minska kvantiteten om den är högre än 1
-      setCartItems(cartItems.map((cartItem) =>
-          cartItem.id === itemId
-            ? { ...cartItem, amount: cartItem.amount - 1 }
-            : cartItem
-        )
-      );
-    } else {
-      // Ta bort produkten helt
       setCartItems(cartItems.filter((cartItem) => cartItem.id !== itemId));
     }
   };
