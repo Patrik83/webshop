@@ -6,8 +6,6 @@
 
 .carousel-content-wrapper {
   overflow: hidden;
-
-  /* nytt nedanför */
   display: flex;
 }
 
