@@ -3,6 +3,7 @@
   display: flex;
   height: 300px;
   flex-direction: column;
+  z-index: -1;
 }
 
 .carousel-content-wrapper {
@@ -17,8 +18,8 @@
 
 .up-arrow,
 .down-arrow {
-  position: absolute;
-  z-index: 1;
+  /* position: absolute; */
+
   display: flex;
   justify-content: center;
   align-items: center;
