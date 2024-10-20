@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
     setCartItems(prevCartItems => 
       prevCartItems.map(cartItem =>
         cartItem.id === item.id
-          ? { ...cartItem, amount: newQuantity } // Sätt den nya kvantiteten direkt
+          ? { ...cartItem, amount: newQuantity }
           : cartItem
       )
     );
@@ -61,7 +61,7 @@ export const CartProvider = ({ children }) => {
 
     if (!currentItem) return; // Om produkten inte finns, gör ingenting
 
-    if (currentItem.amount > 1) {
+    if (currentItem.amount > 0) {
       setCartItems(cartItems.filter((cartItem) => cartItem.id !== itemId));
     }
   };

@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../../context/CartManager";
-import ImageSelector from "./ImageSelector";
 import style from "../../styles/ProductItem.module.css";
 import Image from "./Image";
 import Details from "./Details";
+import Carousel from "./Carousel";
 
 const Item = ({ product }) => {
   const { addToCart } = useContext(CartContext);
@@ -11,9 +11,24 @@ const Item = ({ product }) => {
 
   return (
     <main className={style.productWrapper}>
-      {/* Små produktbilder */}
-      <div className={style.imgSmallWrapper}>
-        <ImageSelector images={product.Images} onImageClick={setSelectedImageIndex} />
+
+      {/* Bildspel */}
+      {/* <div className={style.imgSmallWrapper}> */}
+      <div>
+        <Carousel>
+          {product.Images.map((image, index) => (
+            <div style={{display: "flex", justifyContent: "center"}}>
+                <img
+                  key={index}
+                  src={`/webshop/images/${image.imageUrl}`}
+                  alt={`Bild ${index + 1}`}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setSelectedImageIndex(index)}
+                />
+            </div>
+          ))}
+        </Carousel>
+
       </div>
       {/* Stor produktbild */}
       <div className={style.pictureWrapper}>
@@ -25,8 +40,8 @@ const Item = ({ product }) => {
       </div>
 
       {/* Höger sidomeny */}
-      <div className={style.productDetails}>
-        <Details product={product}>
+      <div className={style.productDetails}>{/* flex parent */}
+        <Details product={product}> {/* flex child */}
           <div className={style.shopbtn}>
             <button style={{ cursor: "pointer" }} onClick={() => addToCart(product)}>
               Handla

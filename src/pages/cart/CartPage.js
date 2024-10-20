@@ -14,15 +14,18 @@ export default function CartPage() {
   return (  
     <main className={style.cartWrapper}>
 
-      <h1 className={style.cartAmountText}>
+      {/* Dölj meddelande om varukorgen är tom */}
+      {cartItems.length > 0 && ( 
+        <h1 className={style.cartAmountText}>
         Varukorgen: {cartItemCount}
       </h1>
+      )}
 
       {/* MIDDLE BOX */}
       <div className={style.cartMiddleBox}>
       
       {/* Om varukorgen är tom, visa ett meddelande */}
-      {cartItems.length === 0 && <h1>Varukorgen är tom</h1>}
+      {cartItems.length === 0 && <h1>Din varukorg är tom</h1>}
 
        {/* Annars, visa de tillagda produkterna */}
         {cartItems.map((item) => (
@@ -71,6 +74,9 @@ export default function CartPage() {
               <button style={{ cursor: "pointer" }} onClick={() => clearCart()}>
                 Töm Varukorgen
               </button>
+              {/* <button style={{ cursor: "pointer" }}>
+                Gå vidare
+              </button> */}
             </div>
           )}
       </div>
