@@ -1,4 +1,5 @@
 .carousel-wrapper {
+  position: relative;
   display: flex;
   height: 300px;
   flex-direction: column;
@@ -16,7 +17,7 @@
 
 .up-arrow,
 .down-arrow {
-  position: relative;
+  position: absolute;
 
   display: flex;
   justify-content: center;
