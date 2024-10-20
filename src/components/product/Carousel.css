@@ -7,13 +7,8 @@
 .carousel-content-wrapper {
   overflow: hidden;
 
-  position: static;
-  z-index: 0;
   /* nytt nedanför */
   display: flex;
-  overflow-x: auto; /* Tillåter horisontell rullning */
-  scroll-snap-type: x mandatory; /* Aktiverar scroll-snap */
-  scroll-behavior: smooth; /* Gör rullning smidig */
 }
 
 .carousel-content {
