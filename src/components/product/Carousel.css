@@ -6,9 +6,16 @@
 
 .carousel-content-wrapper {
   overflow: hidden;
+
+  /* nytt nedanför */
+  display: flex;
+  overflow-x: auto; /* Tillåter horisontell rullning */
+  scroll-snap-type: x mandatory; /* Aktiverar scroll-snap */
+  scroll-behavior: smooth; /* Gör rullning smidig */
 }
 
 .carousel-content {
+  scroll-snap-align: start;
   transition: transform 250ms linear;
 }
 
@@ -40,8 +47,12 @@
 }
 
 
-/* @media (max-width: 600px) {
-  .carousel-wrapper {
+@media (max-width: 600px) {
+  /* .carousel-wrapper {
+    display: none;
+  } */
+
+  .up-arrow, .down-arrow {
     display: none;
   }
-} */
+}

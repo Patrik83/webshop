@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Carousel.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { useSwipeable } from "react-swipeable";
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,16 +19,8 @@ const Carousel = ({ children }) => {
     }
   };
 
-  // Swipeable-handlers
-  const handlers = useSwipeable({
-    onSwipedUp: next, // Svep uppåt för nästa bild
-    onSwipedDown: prev, // Svep nedåt för föregående bild
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true, // För att stödja swipe med mus
-  });
-
   return (
-    <div className="carousel-wrapper" {...handlers}>
+    <div className="carousel-wrapper">
       {/* Pil uppåt */}
       {currentIndex > 0 && (
         <button onClick={prev} className="up-arrow">
