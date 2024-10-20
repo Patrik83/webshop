@@ -40,8 +40,8 @@
 }
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .carousel-wrapper {
-    display: none; /* Döljer hela bildspelet */
+    display: none;
   }
-}
+} */
