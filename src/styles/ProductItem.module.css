@@ -52,12 +52,10 @@ button {
 
   .pictureWrapper {
     grid-column: 2 / -1;
-    /* grid-row: 1 / 2; */
   }
 
   .productDetails {
     grid-column: 2 / -1;
-    /* grid-row: 2 / 3; */
   }
 }
 
@@ -70,7 +68,7 @@ button {
   }
 
   .pictureWrapper {
-    display: none; /* Döljer den stora bilden i mobil-läge */
+    display: none;
   }
 
   /* Visa alla bilder i mobil-läge */

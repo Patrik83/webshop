@@ -12,8 +12,7 @@ const Item = ({ product }) => {
   return (
     <main className={style.productWrapper}>
 
-      {/* Bildspel */}
-      <div>
+      {/* Dolt i mobilläge */}
         <Carousel>
           {product.Images.map((image, index) => (
             <div style={{display: "flex", justifyContent: "center"}}>
@@ -27,10 +26,8 @@ const Item = ({ product }) => {
             </div>
           ))}
         </Carousel>
-
-      </div>
       
-      
+      {/* Dolt i desktopläge */}
       <div className={style.pictureGrid}>
         {product.Images.map((image, index) => (
           <div 
