@@ -5,7 +5,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const length = React.Children.count(children);
+  const length = children.length;
 
   const next = () => {
     if (currentIndex < length - 1) {
@@ -30,8 +30,13 @@ const Carousel = ({ children }) => {
 
       {/* Bild karusell */}
       <div className="carousel-content-wrapper">
-        <div className="carousel-content">
-          {children} {/* Använd children direkt */}
+        <div
+          className="carousel-content"
+          style={{
+            transform: `translateY(-${currentIndex * 33}%)`
+          }}
+        >
+          {children}
         </div>
       </div>
 

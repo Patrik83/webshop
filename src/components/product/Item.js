@@ -3,7 +3,6 @@ import { CartContext } from "../../context/CartManager";
 import style from "../../styles/ProductItem.module.css";
 import Image from "./Image";
 import Details from "./Details";
-import Carousel from "./Carousel";
 
 const Item = ({ product }) => {
   const { addToCart } = useContext(CartContext);
@@ -11,37 +10,36 @@ const Item = ({ product }) => {
 
   return (
     <main className={style.productWrapper}>
-
-      {/* Bildspel */}
-      {/* <div className={style.imgSmallWrapper}> */}
-      <div>
-        <Carousel>
-          {product.Images.map((image, index) => (
-            <div style={{display: "flex", justifyContent: "center"}}>
-                <img
-                  key={index}
-                  src={`/webshop/images/${image.imageUrl}`}
-                  alt={`Bild ${index + 1}`}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setSelectedImageIndex(index)}
-                />
-            </div>
-          ))}
-        </Carousel>
-
-      </div>
       {/* Stor produktbild */}
       <div className={style.pictureWrapper}>
-          <Image
-            imageUrl={product.Images[selectedImageIndex].imageUrl}
-            altText={`Bild ${selectedImageIndex + 1}`}
-            className={style.img}
-          />
+        {/* Visa vald bild i desktop-läge */}
+        <Image
+          imageUrl={product.Images[selectedImageIndex].imageUrl}
+          altText={`Bild ${selectedImageIndex + 1}`}
+          className={style.img}
+        />
+      </div>
+
+      {/* Mobil-läge: Visa alla bilder i ett bildspel */}
+      <div className={style.pictureGrid}>
+        {product.Images.map((image, index) => (
+          <div 
+            key={index}
+            style={{ display: "flex", justifyContent: "center" }} 
+            onClick={() => setSelectedImageIndex(index)} // Ställer in vald bild vid klick
+          >
+            <Image
+              imageUrl={image.imageUrl}
+              altText={`Bild ${index + 1}`}
+              className={style.img}
+            />
+          </div>
+        ))}
       </div>
 
       {/* Höger sidomeny */}
-      <div className={style.productDetails}>{/* flex parent */}
-        <Details product={product}> {/* flex child */}
+      <div className={style.productDetails}>
+        <Details product={product}>
           <div className={style.shopbtn}>
             <button style={{ cursor: "pointer" }} onClick={() => addToCart(product)}>
               Handla
