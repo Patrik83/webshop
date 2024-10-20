@@ -1,6 +1,6 @@
 .productWrapper {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr); /* dra ner antalet till 4 */
   max-width: 1280px;
   margin: auto;
   margin-top: 240px;
@@ -8,20 +8,65 @@
 
 /* Mitten låda - utvald bild */
 .pictureWrapper {
-  grid-column: 2 / 7; /* För desktop-läge */
+  grid-column: 2 / 7;
   grid-row: 1;
+
   background-color: whitesmoke;
+
   display: flex;
   justify-content: center; /* Centrerar horisontellt */
   align-items: center;     /* Centrerar vertikalt */
 }
 
-/* Mobil-läge */
-@media (max-width: 600px) {
+/* Höger låda - produktinfo */
+.productDetails {
+  grid-column: 8 / 13;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFEFA;
+}
+
+.productDetails > .shopbtn {
+  margin-top: auto;
+}
+
+.pictureGrid {
+  display: none;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+@media screen and (max-width: 1278px) {
+    
   .productWrapper {
+      padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .pictureWrapper {
+    grid-column: 2 / -1;
+    /* grid-row: 1 / 2; */
+  }
+
+  .productDetails {
+    grid-column: 2 / -1;
+    /* grid-row: 2 / 3; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  productWrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    width: 100%;
   }
 
   .pictureWrapper {
@@ -30,12 +75,14 @@
 
   /* Visa alla bilder i mobil-läge */
   .pictureGrid {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    height: 200px;
+
     display: flex; /* Flexbox för att skapa ett bildspel */
     overflow-x: auto; /* Tillåter horisontell rullning */
     scroll-snap-type: x mandatory; /* Aktiverar scroll-snap horisontellt */
-    gap: 10px; /* Avstånd mellan bilderna */
-    grid-column: 1; /* Ta upp hela kolumnen */
-    grid-row: 1; /* Första raden */
+    gap: 10px;
   }
 
   .pictureGrid div {
@@ -45,7 +92,9 @@
   }
 
   .productDetails {
-    grid-column: 1; /* Ta upp hela kolumnen */
-    grid-row: 2; /* Sista raden */
+    grid-column: 1 / -1;
+    grid-row: 3;
+    height: 200px;
+    margin-top: 30px;
   }
 }
