@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { CartContext } from "../../context/CartManager";
-import style from "../../styles/CartPage.module.css";
-import Image from '../../components/product/Image';
+import { CartContext } from "../context/CartManager";
+import style from "../styles/CartPage.module.css";
+import Image from '../components/product/ProductImage';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 export default function CartPage() {

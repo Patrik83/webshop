@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "../../styles/ProductList.module.css";
-import Card from "./Card";
-import Image from "./Image";
-import Details from "./Details";
+import Card from "./ProductCard";
+import Image from "./ProductImage";
+import Details from "./ProductInfo";
 
 const List = ({ products, categoryName }) => {
   return (

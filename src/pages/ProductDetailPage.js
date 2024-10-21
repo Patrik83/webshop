@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Item from "../../components/product/Item";
-import { getProductById } from "../../services/ProductService";
+import Item from "../components/product/ProductDetail";
+import { getProductById } from "../services/ProductService";
 
 const ProductDetailPage = () => {
   let { productId } = useParams();

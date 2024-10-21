@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../../context/CartManager";
 import style from "../../styles/ProductItem.module.css";
-import Image from "./Image";
-import Details from "./Details";
-import Carousel from "./Carousel";
+import Image from "./ProductImage";
+import Details from "./ProductInfo";
+import Carousel from "../carousel/Carousel";
 
 const Item = ({ product }) => {
   const { addToCart } = useContext(CartContext);

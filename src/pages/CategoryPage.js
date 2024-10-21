@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import List from "../../components/product/List";
-import { getProductsByCategory } from "../../services/ProductService";
+import List from "../components/product/ProductList";
+import { getProductsByCategory } from "../services/ProductService";
 
 const CategoryPage = () => {
     let { categoryName } = useParams();

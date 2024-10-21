@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Carousel.css";
+import style from "../../styles/Carousel.module.css";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
@@ -20,18 +20,18 @@ const Carousel = ({ children }) => {
   };
 
   return (
-    <div className="carousel-wrapper">
+    <div className={style.carouselWrapper}>
       {/* Pil uppåt */}
       {currentIndex > 0 && (
-        <button onClick={prev} className="up-arrow">
+        <button onClick={prev} className={style.upArrow}>
           <KeyboardArrowUpIcon style={{ fontSize: 48 }} />
         </button>
       )}
 
       {/* Bild karusell */}
-      <div className="carousel-content-wrapper">
+      <div className={style.carouselContentWrapper}>
         <div
-          className="carousel-content"
+          className={style.carouselContent}
           style={{
             transform: `translateY(-${currentIndex * 50}%)`
           }}
@@ -42,7 +42,7 @@ const Carousel = ({ children }) => {
 
       {/* Pil neråt */}
       {currentIndex < length - 1 && (
-        <button onClick={next} className="down-arrow">
+        <button onClick={next} className={style.downArrow}>
           <KeyboardArrowDownIcon style={{ fontSize: 48 }} />
         </button>
       )}
