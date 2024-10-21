@@ -12,10 +12,10 @@ const Item = ({ product }) => {
   return (
     <main className={style.productWrapper}>
 
-      {/* Dolt i mobilläge */}
+      {/* Bild-karusell desktop */}
         <Carousel>
           {product.Images.map((image, index) => (
-            <div style={{display: "flex", justifyContent: "center"}}>
+            <div>
                 <img
                   key={index}
                   src={`/webshop/images/${image.imageUrl}`}
@@ -27,7 +27,7 @@ const Item = ({ product }) => {
           ))}
         </Carousel>
       
-      {/* Dolt i desktopläge */}
+      {/* Bild-karusell mobil */}
       <div className={style.pictureGrid}>
         {product.Images.map((image, index) => (
           <div 
@@ -44,12 +44,12 @@ const Item = ({ product }) => {
         ))}
       </div>
 
-      {/* Stor produktbild */}
+      {/* Stor produktbild desktop */}
       <div className={style.pictureWrapper}>
           <Image
             imageUrl={product.Images[selectedImageIndex].imageUrl}
             altText={`Bild ${selectedImageIndex + 1}`}
-            className={style.img}
+            className={style.productImage}
           />
       </div>
 

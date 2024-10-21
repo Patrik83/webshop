@@ -3,7 +3,7 @@
   display: flex;
   height: 300px;
   flex-direction: column;
-  z-index: -1;
+  z-index: 1;
 }
 
 .carousel-content-wrapper {
@@ -16,10 +16,18 @@
   transition: transform 250ms linear;
 }
 
+.carousel-content > div {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+.carousel-content > div:hover {
+  background-color: lightyellow;
+}
+
 .up-arrow,
 .down-arrow {
-  /* position: absolute; */
-
   display: flex;
   justify-content: center;
   align-items: center;

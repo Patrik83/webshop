@@ -33,7 +33,7 @@ const Carousel = ({ children }) => {
         <div
           className="carousel-content"
           style={{
-            transform: `translateY(-${currentIndex * 33}%)`
+            transform: `translateY(-${currentIndex * 50}%)`
           }}
         >
           {children}
